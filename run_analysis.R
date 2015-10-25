@@ -4,7 +4,6 @@
 
 
 run_analysis <- function() {
-        # library(data.table)
         library(dplyr)
         library(data.table)
         source("createDataset.R")
