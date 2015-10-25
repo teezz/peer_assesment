@@ -10,9 +10,11 @@ The original data comes from Human Activity Recognition Using Smartphones Data S
 2. The function loads the required librarys "dyplr" and "data.table".
 3. The source files for all subfunctions were loaded.
 4. The function "create_dataset()" loads the test and training data and combines them into one data frame ("dat").
-5. The function "assign_colnames(dat)" prosesses the data fram "dat" and assigns appropriate labels the data set with descriptive variable names.
-6.
-
+5. The function "assign_colnames(dat)" prosesses the data frame "dat" and returns a data frame with descriptive variable names instead of the prior generic ones. This is done by adding volunteer IDs as "subject" and "activity" IDs to the data frame and reading the other column names out of the given file "features.txt".
+6. Function "set_activity_names(dat)" maps the activity IDs with descriptive activity names, replaces them and returns the changed data frame.
+7. Function "get_mean_and_std(dat)" extracts only the measurements on the mean and standard deviation for each measurement by using "subject" and "activity" to identify the measurments.
+8. Function "create_tidy_data(dat)" groups the data by the two variables "subject" and "activity" and calculates the mean for all other variables within these groups.
+9. The last function "write.table(...) creates a new txt file in the working directory with the cleaned tidy data set and without row names.
 
 ]]></content>
   <tabTrigger>readme</tabTrigger>
